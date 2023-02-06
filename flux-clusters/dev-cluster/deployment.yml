@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: block-buster
+  name: block-buster-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: block-buster
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: block-buster
+        api: downward
+        usage: global
+        env: dev
+    spec:
+      containers:
+        - name: app-container
+          image:  siddharth67/block-bluster-dev:7.1.0
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "125m"
+            limits:
+              memory: "64Mi"
+              cpu: "250m"
+          env:
+            - name: MY_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: MY_POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: MY_POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: MY_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
