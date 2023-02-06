@@ -8,7 +8,7 @@ spec:
   ports:
   - port: 80
     protocol: TCP
-    targetPort:
+    targetPort: 80
   selector:
     app: block-buster
   type: NodePort
