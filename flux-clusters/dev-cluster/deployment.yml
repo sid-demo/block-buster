@@ -4,6 +4,7 @@ metadata:
   labels:
     app: block-buster
   name: block-buster-deployment
+  namespace: 1-demo
 spec:
   replicas: 1
   selector:
