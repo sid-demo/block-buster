@@ -4,6 +4,7 @@ metadata:
   labels:
     app: block-buster
   name: block-buster-service
+  namespace: 1-demo
 spec:
   ports:
   - port: 80
