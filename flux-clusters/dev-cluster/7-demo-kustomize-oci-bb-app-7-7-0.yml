@@ -5,6 +5,9 @@ metadata:
   name: 7-demo-kustomize-oci-bb-app-7-7-0
   namespace: flux-system
 spec:
+  dependsOn:
+  - name: infra-db-kustomize-git-mysql
+    namespace: database
   healthChecks:
   - kind: Deployment
     name: block-buster
