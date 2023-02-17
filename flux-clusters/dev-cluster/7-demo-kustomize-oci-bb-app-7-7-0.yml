@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: 7-demo-kustomize-oci-bb-app-7-7-0
+  namespace: flux-system
+spec:
+  healthChecks:
+  - kind: Deployment
+    name: block-buster
+    namespace: 7-demo
+  interval: 10s
+  path: ./
+  prune: true
+  sourceRef:
+    kind: OCIRepository
+    name: 7-demo-source-oci-bb-app-7-7-0
+  targetNamespace: 7-demo
+  timeout: 2m0s
+
