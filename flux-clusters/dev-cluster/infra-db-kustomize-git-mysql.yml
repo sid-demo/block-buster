@@ -1,0 +1,15 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: infra-db-kustomize-git-mysql
+  namespace: flux-system
+spec:
+  interval: 1m40s
+  path: ./infrastructure/database
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: infra-db-source-git-mysql
+  targetNamespace: database
+
