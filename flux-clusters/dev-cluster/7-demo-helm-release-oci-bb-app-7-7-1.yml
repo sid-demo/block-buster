@@ -15,4 +15,15 @@ spec:
       version: 7.7.1
   interval: 1m0s
   targetNamespace: 7-demo
+  values:
+    labels:
+      app:
+        env: dev
+        name: block-buster
+        version: 7.7.1
+    namespace:
+      name: 7-demo
+    replicaCount: 1
+    service:
+      type: NodePort
 
