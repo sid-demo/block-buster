@@ -8,13 +8,13 @@ spec:
   git:
     checkout:
       ref:
-        branch: main
+        branch: 8-demo
     commit:
       author:
         email: fluxcdbot@users.noreply.github.com
         name: fuxcdbot
     push:
-      branch: main
+      branch: 8-demo
   interval: 10s
   sourceRef:
     kind: GitRepository
