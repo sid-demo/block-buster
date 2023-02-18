@@ -9,4 +9,4 @@ spec:
     branch: 8-demo
   secretRef:
     name: 8-demo-git-bb-app-auth
-  url: https://github.com/sid-demo/bb-app-source
+  url: ssh://git@github.com/sid-demo/bb-app-source.git
