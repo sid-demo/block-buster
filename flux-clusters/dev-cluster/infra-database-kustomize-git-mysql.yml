@@ -5,6 +5,10 @@ metadata:
   name: infra-database-kustomize-git-mysql
   namespace: flux-system
 spec:
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-gpg
   interval: 1m40s
   path: ./database
   prune: true
