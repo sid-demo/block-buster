@@ -7,6 +7,6 @@ metadata:
 spec:
   interval: 1m0s
   ref:
-    branch: 7-demo
+    branch: infrastructure
   url: https://github.com/sid-demo/bb-app-source
 
