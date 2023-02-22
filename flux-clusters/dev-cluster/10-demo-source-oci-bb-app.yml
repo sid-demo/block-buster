@@ -11,7 +11,7 @@ spec:
     tag: 10-demo-2588718
   secretRef:
     name: ghcr-auth
-  url: oci://ghcr.io/sid-demo/bb-app-7.10.0
+  url: oci://ghcr.io/sid-demo/bb-app
   verify:
     provider: cosign
     secretRef:
