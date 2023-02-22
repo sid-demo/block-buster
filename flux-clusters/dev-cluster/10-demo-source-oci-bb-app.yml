@@ -12,4 +12,8 @@ spec:
   secretRef:
     name: ghcr-auth
   url: oci://ghcr.io/sid-demo/bb-app-7.10.0
+  verify:
+    provider: cosign
+    secretRef:
+      name: cosign-pub
 
