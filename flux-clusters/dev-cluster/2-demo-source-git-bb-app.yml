@@ -5,7 +5,7 @@ metadata:
   name: 2-demo-source-git-bb-app
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 3m0s
   ref:
     branch: 2-demo
   url: https://github.com/sid-demo/bb-app-source
