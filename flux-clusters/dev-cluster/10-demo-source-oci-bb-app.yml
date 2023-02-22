@@ -8,7 +8,7 @@ spec:
   interval: 1m0s
   provider: generic
   ref:
-    tag: 10-demo-2588718
+    tag: sha256:55ac2c5f2d68d2286ac8f4e5828572aef25f9c31f5f56644b0a25d04d5cce01b
   secretRef:
     name: ghcr-auth
   url: oci://ghcr.io/sid-demo/bb-app-7.10.0
