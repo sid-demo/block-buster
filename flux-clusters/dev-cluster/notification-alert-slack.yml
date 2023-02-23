@@ -28,5 +28,5 @@ spec:
   - kind: ImageUpdateAutomation
     name: '*'
   providerRef:
-    name: notifications-provider-slack
+    name: notification-provider-slack
 
