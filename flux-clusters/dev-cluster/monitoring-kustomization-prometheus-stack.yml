@@ -10,5 +10,5 @@ spec:
   prune: false
   sourceRef:
     kind: GitRepository
-    name: flux-monitoring
+    name: monitoring-source-prometheus-stack
 
